@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}" dir="{{ site.data.lang[page.lang].core["html_direction"] | default: 'ltr' }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title | default: site.data.lang[page.lang].core["html_title"] | default: 'AugXP.com' }}</title>
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120237615-1"></script>
+    <style>
+    {% include css.layout.css %}
+    {% include css.style.css %}
+    {% if page.cssinclude %}
+      {% for css in page.cssinclude %}
+{% include {{css}}.css %}
+      {% endfor %}
+    {% endif %}
+    {{ page.css | default: '' }}
+    </style>
+    {% include components.inc %}
+  </head>
+  <body>
+    {{content}}
+  </body>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{site.gtag}}', { 'anonymize_ip': true });{% if page.gtag %}
+    gtag('config', '{{page.gtag}}', { 'anonymize_ip': true });{% endif %}
+  </script>
+</html>

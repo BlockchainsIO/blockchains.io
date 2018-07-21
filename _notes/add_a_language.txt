@@ -1,0 +1,4 @@
+add code and name to /_data/lang/all.yaml
+create dir in /_data/lang/CODE/
+add default lang value to _config.yml
+run the cone_xx.py script 

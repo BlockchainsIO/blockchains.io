@@ -1,0 +1,550 @@
+title: Blockchains.io
+description: >- # this means to ignore newlines until "baseurl:"
+  Technical, statistical and considered opinions on blockchain technology
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://blockchains.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: blockchains
+instagram_username:  blockchains.io
+
+gtag: UA-120237615-1
+gtag_amp: UA-120237615-3
+# Build settings
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - _notes/
+   - xx/
+   - venv/
+   - node_modules
+
+
+defaults:
+  -
+      scope:
+        path: ""
+      values:
+        lang: "en"
+  -
+    scope:
+      path: "/af/*"
+    values:
+      lang: af
+  -
+    scope:
+      path: "/sq/*"
+    values:
+      lang: sq
+  -
+    scope:
+      path: "/am/*"
+    values:
+      lang: am
+  -
+    scope:
+      path: "/ar/*"
+    values:
+      lang: ar
+  -
+    scope:
+      path: "/hy/*"
+    values:
+      lang: hy
+  -
+    scope:
+      path: "/az/*"
+    values:
+      lang: az
+  -
+    scope:
+      path: "/eu/*"
+    values:
+      lang: eu
+  -
+    scope:
+      path: "/be/*"
+    values:
+      lang: be
+  -
+    scope:
+      path: "/bn/*"
+    values:
+      lang: bn
+  -
+    scope:
+      path: "/bs/*"
+    values:
+      lang: bs
+  -
+    scope:
+      path: "/bg/*"
+    values:
+      lang: bg
+  -
+    scope:
+      path: "/ca/*"
+    values:
+      lang: ca
+  -
+    scope:
+      path: "/ceb/*"
+    values:
+      lang: ceb
+  -
+    scope:
+      path: "/ny/*"
+    values:
+      lang: ny
+  -
+    scope:
+      path: "/zh/*"
+    values:
+      lang: zh
+  -
+    scope:
+      path: "/zh-tw/*"
+    values:
+      lang: zh-tw
+  -
+    scope:
+      path: "/co/*"
+    values:
+      lang: co
+  -
+    scope:
+      path: "/hr/*"
+    values:
+      lang: hr
+  -
+    scope:
+      path: "/cs/*"
+    values:
+      lang: cs
+  -
+    scope:
+      path: "/da/*"
+    values:
+      lang: da
+  -
+    scope:
+      path: "/nl/*"
+    values:
+      lang: nl
+  -
+    scope:
+      path: "/en/*"
+    values:
+      lang: en
+  -
+    scope:
+      path: "/eo/*"
+    values:
+      lang: eo
+  -
+    scope:
+      path: "/et/*"
+    values:
+      lang: et
+  -
+    scope:
+      path: "/tl/*"
+    values:
+      lang: tl
+  -
+    scope:
+      path: "/fi/*"
+    values:
+      lang: fi
+  -
+    scope:
+      path: "/fr/*"
+    values:
+      lang: fr
+  -
+    scope:
+      path: "/fy/*"
+    values:
+      lang: fy
+  -
+    scope:
+      path: "/gl/*"
+    values:
+      lang: gl
+  -
+    scope:
+      path: "/ka/*"
+    values:
+      lang: ka
+  -
+    scope:
+      path: "/de/*"
+    values:
+      lang: de
+  -
+    scope:
+      path: "/el/*"
+    values:
+      lang: el
+  -
+    scope:
+      path: "/gu/*"
+    values:
+      lang: gu
+  -
+    scope:
+      path: "/ht/*"
+    values:
+      lang: ht
+  -
+    scope:
+      path: "/ha/*"
+    values:
+      lang: ha
+  -
+    scope:
+      path: "/haw/*"
+    values:
+      lang: haw
+  -
+    scope:
+      path: "/iw/*"
+    values:
+      lang: iw
+  -
+    scope:
+      path: "/hi/*"
+    values:
+      lang: hi
+  -
+    scope:
+      path: "/hmn/*"
+    values:
+      lang: hmn
+  -
+    scope:
+      path: "/hu/*"
+    values:
+      lang: hu
+  -
+    scope:
+      path: "/is/*"
+    values:
+      lang: is
+  -
+    scope:
+      path: "/ig/*"
+    values:
+      lang: ig
+  -
+    scope:
+      path: "/id/*"
+    values:
+      lang: id
+  -
+    scope:
+      path: "/ga/*"
+    values:
+      lang: ga
+  -
+    scope:
+      path: "/it/*"
+    values:
+      lang: it
+  -
+    scope:
+      path: "/ja/*"
+    values:
+      lang: ja
+  -
+    scope:
+      path: "/fw/*"
+    values:
+      lang: fw
+  -
+    scope:
+      path: "/kn/*"
+    values:
+      lang: kn
+  -
+    scope:
+      path: "/kk/*"
+    values:
+      lang: kk
+  -
+    scope:
+      path: "/km/*"
+    values:
+      lang: km
+  -
+    scope:
+      path: "/ko/*"
+    values:
+      lang: ko
+  -
+    scope:
+      path: "/ku/*"
+    values:
+      lang: ku
+  -
+    scope:
+      path: "/ky/*"
+    values:
+      lang: ky
+  -
+    scope:
+      path: "/lo/*"
+    values:
+      lang: lo
+  -
+    scope:
+      path: "/lv/*"
+    values:
+      lang: lv
+  -
+    scope:
+      path: "/lt/*"
+    values:
+      lang: lt
+  -
+    scope:
+      path: "/lb/*"
+    values:
+      lang: lb
+  -
+    scope:
+      path: "/mk/*"
+    values:
+      lang: mk
+  -
+    scope:
+      path: "/mg/*"
+    values:
+      lang: mg
+  -
+    scope:
+      path: "/ms/*"
+    values:
+      lang: ms
+  -
+    scope:
+      path: "/ml/*"
+    values:
+      lang: ml
+  -
+    scope:
+      path: "/mt/*"
+    values:
+      lang: mt
+  -
+    scope:
+      path: "/mi/*"
+    values:
+      lang: mi
+  -
+    scope:
+      path: "/mr/*"
+    values:
+      lang: mr
+  -
+    scope:
+      path: "/mn/*"
+    values:
+      lang: mn
+  -
+    scope:
+      path: "/my/*"
+    values:
+      lang: my
+  -
+    scope:
+      path: "/ne/*"
+    values:
+      lang: ne
+  -
+    scope:
+      path: "/no/*"
+    values:
+      lang: no
+  -
+    scope:
+      path: "/ps/*"
+    values:
+      lang: ps
+  -
+    scope:
+      path: "/fa/*"
+    values:
+      lang: fa
+  -
+    scope:
+      path: "/pl/*"
+    values:
+      lang: pl
+  -
+    scope:
+      path: "/pt/*"
+    values:
+      lang: pt
+  -
+    scope:
+      path: "/pa/*"
+    values:
+      lang: pa
+  -
+    scope:
+      path: "/ro/*"
+    values:
+      lang: ro
+  -
+    scope:
+      path: "/ru/*"
+    values:
+      lang: ru
+  -
+    scope:
+      path: "/sm/*"
+    values:
+      lang: sm
+  -
+    scope:
+      path: "/gd/*"
+    values:
+      lang: gd
+  -
+    scope:
+      path: "/sr/*"
+    values:
+      lang: sr
+  -
+    scope:
+      path: "/st/*"
+    values:
+      lang: st
+  -
+    scope:
+      path: "/sn/*"
+    values:
+      lang: sn
+  -
+    scope:
+      path: "/sd/*"
+    values:
+      lang: sd
+  -
+    scope:
+      path: "/si/*"
+    values:
+      lang: si
+  -
+    scope:
+      path: "/sk/*"
+    values:
+      lang: sk
+  -
+    scope:
+      path: "/sl/*"
+    values:
+      lang: sl
+  -
+    scope:
+      path: "/so/*"
+    values:
+      lang: so
+  -
+    scope:
+      path: "/es/*"
+    values:
+      lang: es
+  -
+    scope:
+      path: "/su/*"
+    values:
+      lang: su
+  -
+    scope:
+      path: "/sw/*"
+    values:
+      lang: sw
+  -
+    scope:
+      path: "/sv/*"
+    values:
+      lang: sv
+  -
+    scope:
+      path: "/tg/*"
+    values:
+      lang: tg
+  -
+    scope:
+      path: "/ta/*"
+    values:
+      lang: ta
+  -
+    scope:
+      path: "/te/*"
+    values:
+      lang: te
+  -
+    scope:
+      path: "/th/*"
+    values:
+      lang: th
+  -
+    scope:
+      path: "/tr/*"
+    values:
+      lang: tr
+  -
+    scope:
+      path: "/uk/*"
+    values:
+      lang: uk
+  -
+    scope:
+      path: "/ur/*"
+    values:
+      lang: ur
+  -
+    scope:
+      path: "/uz/*"
+    values:
+      lang: uz
+  -
+    scope:
+      path: "/vi/*"
+    values:
+      lang: vi
+  -
+    scope:
+      path: "/cy/*"
+    values:
+      lang: cy
+  -
+    scope:
+      path: "/xh/*"
+    values:
+      lang: xh
+  -
+    scope:
+      path: "/yi/*"
+    values:
+      lang: yi
+  -
+    scope:
+      path: "/yo/*"
+    values:
+      lang: yo
+  -
+    scope:
+      path: "/zu/*"
+    values:
+      lang: zu

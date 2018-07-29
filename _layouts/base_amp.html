@@ -4,13 +4,18 @@
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-    <title>Hello, AMPs</title>
-    <link rel="canonical" href="{{ site.url }}{{ page.url | remove_first: "amp/" }}">
+    
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace_first: "/amp/","/" }}">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-
+    {% if page.alternate.first %}{% for altlang in page.alternate %}<link rel="alternate" href="{{ site.url }}{{ page.url | replace_first: page.lang, altlang }}" hreflang="{{ altlang }}" >
+    {% endfor %}
+    {% else %}
+    {% if page.alternate %}{% for altlang in site.data.lang[page.alternate] %}{% if altlang.code != page.lang %}<link rel="alternate" href="{{ site.url }}{{ page.url | replace_first: page.lang, altlang.code }}" hreflang="{{ altlang.code }}" >{% endif %}
+    {% endfor %}{% endif %}{% endif %}
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     {%- include css.fonts.css -%}
     <style amp-custom>
+    {% include css.fonts.css %}
     {% include css.layout.css %}
     {% include css.style.css %}
     {% if page.cssinclude %}

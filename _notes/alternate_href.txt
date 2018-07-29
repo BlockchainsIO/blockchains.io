@@ -1,0 +1,33 @@
+For cross linking pages with <link rel="alternate" href="http://example.com" hreflang="en-us" />
+
+
+There are 2 ways:
+1. languages are stored in /_data/lang/<FILE>.json
+2. manual list
+
+(1)
+`all` is all languages supported
+'level1' is a primary group of languages with get priority translations
+
+You can add other files if you need other language subgroupings. Follow the format in `all.json`
+
+To activate the cross linking, on a per page basis, set the `alternate:`
+front matter to the name of the data file you want to use the langauge from
+e.g.
+---
+alternate: all
+---
+
+or
+---
+alternate: level1
+---
+
+(2)
+Manually list the lang codes in front matter as an array
+---
+alternate:
+  - af
+  - be
+  - de
+---

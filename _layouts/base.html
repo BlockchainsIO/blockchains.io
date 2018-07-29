@@ -2,10 +2,17 @@
 <html lang="{{ page.lang }}" dir="{{ site.data.lang[page.lang].core["html_direction"] | default: 'ltr' }}">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title | default: site.data.lang[page.lang].core["html_title"] | default: 'AugXP.com' }}</title>
+    <title>{{ page.title | default: site.data.lang[page.lang].core["html_title"] | default: 'Blockchains.io' }}</title>
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+    <link rel="amphtml" href="{{ site.url }}{{ page.url | replace:'index.html',''}}amp/">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120237615-1"></script>
+    {% if page.alternate.first %}{% for altlang in page.alternate %}<link rel="alternate" href="{{ site.url }}{{ page.url | replace_first: page.lang, altlang }}" hreflang="{{ altlang }}" >
+    {% endfor %}
+    {% else %}
+    {% if page.alternate %}{% for altlang in site.data.lang[page.alternate] %}{% if altlang.code != page.lang %}<link rel="alternate" href="{{ site.url }}{{ page.url | replace_first: page.lang, altlang.code }}" hreflang="{{ altlang.code }}" >{% endif %}
+    {% endfor %}{% endif %}{% endif %}
     <style>
+    {% include css.fonts.css %}
     {% include css.layout.css %}
     {% include css.style.css %}
     {% if page.cssinclude %}

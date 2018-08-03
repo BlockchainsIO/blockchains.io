@@ -11,8 +11,9 @@
     {% else %}
     {% if page.alternate %}{% for altlang in site.data.lang[page.alternate] %}{% if altlang.code != page.lang %}<link rel="alternate" href="{{ site.url }}{{ page.url | replace_first: page.lang, altlang.code }}" hreflang="{{ altlang.code }}" >{% endif %}
     {% endfor %}{% endif %}{% endif %}
-    <style>
     {% include css.fonts.css %}
+    <style>
+
     {% include css.layout.css %}
     {% include css.style.css %}
     {% if page.cssinclude %}

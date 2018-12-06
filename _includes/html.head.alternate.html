@@ -1,0 +1,7 @@
+{%- if page.alternate.first -%}{%- for altlang in page.alternate -%}<link rel="alternate" href="{{ site.url }}{{ page.url | replace_first: page.lang, altlang }}" hreflang="{{ altlang }}" >
+{%- endfor -%}
+{%- elsif page.alternate_is_root -%}
+  {%- for altlang in site.data.lang.all -%}<link rel="alternate" href="{{ site.url }}/{{ altlang.code }}/" hreflang="{{ altlang.code }}" >{%- endfor -%}
+{%- else -%}
+{%- if page.alternate -%}{%- for altlang in site.data.lang[page.alternate] -%}{%- if altlang.code != page.lang -%}<link rel="alternate" href="{{ site.url }}{{ page.url | replace_first: page.lang, altlang.code }}" hreflang="{{ altlang.code }}" >{%- endif -%}{%- endfor -%}{%- endif -%}
+{%- endif -%}

@@ -1,6 +1,7 @@
 ---
-layout: homepage
+layout: contentpage_amp
 ---
+<div>
 Languages:
 <ul>
 {% for lang in site.data.lang.all %}
@@ -12,3 +13,4 @@ Languages:
   </li>
 {% endfor %}
 </ul>
+</div>

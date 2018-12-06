@@ -3,10 +3,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   Technical, statistical and considered opinions on blockchain technology
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blockchains.io" # the base hostname & protocol for your site, e.g. http://example.com
-static_url: "/static"
+static_url: "https://static.blockchains.io"
 twitter_username: blockchains
 instagram_username:  blockchains.io
 
+gtm_id: GTM-N2K3V3W
 gtag: UA-120237615-1
 gtag_amp: UA-120237615-3
 # Build settings
@@ -23,10 +24,27 @@ exclude:
    - Gemfile
    - Gemfile.lock
    - _notes/
-   - xx/
+   - _xx/
    - venv/
    - node_modules
 
+amazons:
+  - au
+  - br
+  - ca
+  - cn
+  - fr
+  - de
+  - in
+  - it
+  - jp
+  - mx
+  - nl
+  - es
+  - tr
+  - uk
+  - us
+  - none
 
 defaults:
   -
@@ -139,6 +157,8 @@ defaults:
       path: "/nl/*"
     values:
       lang: nl
+      amazons:
+        - nl
   -
     scope:
       path: "/en/*"

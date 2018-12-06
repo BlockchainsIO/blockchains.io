@@ -4,6 +4,7 @@ For cross linking pages with <link rel="alternate" href="http://example.com" hre
 There are 2 ways:
 1. languages are stored in /_data/lang/<FILE>.json
 2. manual list
+3. special case for homepage
 
 (1)
 `all` is all languages supported
@@ -30,4 +31,10 @@ alternate:
   - af
   - be
   - de
+---
+
+(3) Just for the homepage
+---
+layout: homepage_amp
+alternate_is_root: true
 ---

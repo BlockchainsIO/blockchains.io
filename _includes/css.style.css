@@ -1,6 +1,69 @@
 body{
-  font-family: -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont,"Segoe UI", "Roboto", "Oxygen","Ubuntu", "Cantarell", "Fira Sans","Droid Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
+#main {
+  flex: 1;
+}
+#section1{
+  min-height: 50vh;
+  display: table;
+}
+
+#section1 .child {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.show-au, .show-br, .show-ca, .show-cn, .show-fr, .show-de,.show-in,.show-it,
+.show-jp,.show-mx,.show-nl,.show-es,.show-tr,.show-uk,.show-us,.show-none{
+    display: none;
+}
+.amp-geo-group-au .show-au {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-br .show-br {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-ca .show-ca {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-cn .show-cn {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-fr .show-fr {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-de .show-de {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-in .show-in {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-it .show-it {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-jp .show-jp {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-mx .show-mx {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-nl .show-nl {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-es .show-es {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-tr .show-tr {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-uk .show-uk {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-group-us .show-us {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+.amp-geo-no-group .show-none {display: block; box-shadow:0 2px 4px 0 rgba(0,0,0,.1)background-color: white;border-radius:.25rem;margin: 20px;padding: 5px;border: 1px orange solid;}
+
+.amazon-block{
+
+}
+.amazon-block .ia img{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.amazon-card{
+  border-radius:.25rem;
+  border: solid black 1px;
+  margin: 0px 5px 0px 5px;
+  overflow: hidden;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.amazon-card img{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.amazon-card a{
+  text-decoration: none;
+}
+amp-img.contain img {
+    object-fit: contain;
+    border: 1px blue solid;
+  }

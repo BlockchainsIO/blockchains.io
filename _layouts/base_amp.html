@@ -1,10 +1,15 @@
 <!doctype html>
 <html amp lang="{{ page.lang }}" dir="{{site.data.lang[page.lang].core["html_direction"] }}" >
   <head>
+    <title>{{ page.title | default: site.data.lang[page.lang].core["html_title"] | default: "Blockchains.io"}}</title>
+    <meta name="description" content="{{ page.title | default: site.data.lang[page.lang].core["html_description"] | default: "Blockchains.io"}}">
     <meta charset="utf-8">
     <link as=script href=https://cdn.ampproject.org/v0.js rel=preload>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-geo" src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"></script>
     <meta name="amp-google-client-id-api" content="googleanalytics">
     {%- assign lang_path = "/" | append: page.lang | append: "/" -%}
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace_first: "index.html","" | replace_first: lang_path, "/en/" }}">
@@ -18,7 +23,22 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     {%- include css.fonts.css -%}
     <style amp-custom>
-    {% include css.layout.css %}
+    {% include css.tailwind.preflight.css %}
+    {% include css.tailwind.container.css %}
+    {% include css.tailwind.flex.css %}
+    {% include css.tailwind.utils.css %}
+    @media (min-width:576px){
+    {% include css.tailwind.media.sm.css %}
+    }
+    @media (min-width:768px){
+    {% include css.tailwind.media.md.css %}
+    }
+    @media (min-width:992px){
+    {% include css.tailwind.media.lg.css %}
+    }
+    @media (min-width:1200px){
+    {% include css.tailwind.media.xl.css %}
+    }
     {% include css.style.css %}
     {% if page.cssinclude %}
       {% for css in page.cssinclude %}
@@ -29,8 +49,12 @@
     </style>
     {% include html.head.components-amp.inc %}
   </head>
-  <body><amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ site.gtm_id }}&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+  <body class=""><amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ site.gtm_id }}&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics><amp-geo layout="nodisplay"><script type="application/json">{"AmpBind": true,"ISOCountryGroups": {"au": [ "au","nz"],"br": [ "br"],"ca": [ "ca"],"cn": [ "cn"],"fr": [ "fr"],"de": [ "de"],"in": [ "in"],"it": [ "it"],"jp": [ "jp"],"mx": [ "mx"],"nl": [ "nl"],"es": [ "es"],"tr": [ "tr"],"uk": [ "gb"],"us": [ "us","as","gu","mp","pr","um","vi"],"none": [ "unknown" ]}}</script></amp-geo>
+    {%- include html.header.html -%}
+    <div id="main">
     {{content}}
+    </div>
+    {%- include html.footer.html -%}
   </body>
 {% if page.gtag %}
 <amp-analytics type="googleanalytics">

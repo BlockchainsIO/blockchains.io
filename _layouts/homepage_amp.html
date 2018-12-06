@@ -2,14 +2,19 @@
 layout: base_amp
 
 ---
-<div class="cm">
-<amp-img alt="Blockchains.io"
-  src="{{site.static_url}}/favicon/android-icon-72x72.1.png"
-  width="72"
-  height="72"
-  layout="fixed">
-</amp-img>
-<br>
-{{ site.data.lang[page.lang].core["holding_under_construction"] }} - Blockchains.io <br>
-</div>
-{{ content }}
+
+<section class="container mx-auto w-full" id="section1">
+  <div class="text-center child">
+    <amp-img alt="Blockchains.io"
+      src="{{site.static_url}}/favicon/android-icon-72x72.1.png"
+      width="72"
+      height="72"
+      layout="fixed">
+    </amp-img>
+    <br>
+    {{ site.data.lang[page.lang].core["holding_under_construction"] }} - Blockchains.io <br>
+  </div>
+</section>
+<section class="container mx-auto w-full" id="section2">
+{% include html.component.amazon.carousel.html set="1" block_id="hp_f1" %}
+</section>

@@ -1,0 +1,35 @@
+<amp-img src="{{site.static_url}}/bcio/i/a2.png" noloading width="24" height="24" layout="fixed" alt="Amazon"></amp-img><amp-img src="{{site.static_url}}/bcio/i/{{ include.code }}.png" noloading width="24" height="24" layout="fixed" alt="{{ include.name}}"></amp-img>
+
+{%- if include.item -%}<div class="text-center">{%- include
+    html.component.amazon.component.item.html
+    title=item.title
+    asin=item.asin
+    author=item.author
+    stars=item.stars
+    thumbnail=item.thumbnail
+    tracker_image=item.tracker_image
+    link=item.link
+    code=include.code
+    block_id=include.block_id
+    block_pos=1
+-%}</div>{%- endif -%}
+
+{%- if include.items -%}{%- assign: b_pos = 1 -%}
+
+<amp-carousel height="210" layout="fixed-height" type="carousel">{%- for item in items -%}
+  {%- include
+      html.component.amazon.component.item.html
+      title=item.title
+      asin=item.asin
+      author=item.author
+      stars=item.stars
+      thumbnail=item.thumbnail
+      tracker_image=item.tracker_image
+      link=item.link
+      code=include.code
+      block_id=include.block_id
+      block_pos=forloop.index
+  -%}
+{%- endfor -%}
+</amp-carousel>
+{%- endif -%}

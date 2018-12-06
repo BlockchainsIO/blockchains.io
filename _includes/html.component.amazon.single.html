@@ -1,0 +1,59 @@
+{%- assign amazons = page.amazons | default: site.amazons -%}
+{%- assign min = 0 -%}
+{%- assign max = 5 -%}
+{%- assign diff = max | minus: min -%}
+{%- assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min -%}
+{%- assign set = include.set | default: 1 -%}
+{%- assign selected-index = include.selected-index | default: randomNumber -%}
+<!-- Amazon Block -->
+<div class="amazon-block">
+{%- if amazons contains 'au' -%}
+<div class="show-au">{%- assign item = site.data.amazon.au[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='au' name='Australia' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'br' -%}
+<div class="show-br">{%- assign item = site.data.amazon.br[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='br' name='Brazil' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'ca' -%}
+<div class="show-ca">{%- assign item = site.data.amazon.ca[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='ca' name='Canada' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'cn' -%}
+<div class="show-cn">{%- assign item = site.data.amazon.cn[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='cn' name='中国' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'de' -%}
+<div class="show-de">{%- assign item = site.data.amazon.de[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='de' name='Deutschland' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'es' -%}
+<div class="show-es">{%- assign item = site.data.amazon.es[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='es' name='España' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'fr' -%}
+<div class="show-fr">{%- assign item = site.data.amazon.fr[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='fr' name='France' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'in' -%}
+<div class="show-in">{%- assign item = site.data.amazon.in[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='in' name='India' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'it' -%}
+<div class="show-it">{%- assign item = site.data.amazon.it[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='it' name='Italia' item=item -%}</div>
+</div>
+{%- endif -%}
+{%- if amazons contains 'jp' -%}
+<div class="show-jp">{%- assign item = site.data.amazon.jp[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='jp' name='日本' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'mx' -%}
+<div class="show-mx">{%- assign item = site.data.amazon.mx[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='mx' name='Mexico' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'nl' -%}
+<div class="show-nl">{%- assign item = site.data.amazon.nl[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='nl' name='Nederland' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'tr' -%}
+<div class="show-tr">{%- assign item = site.data.amazon.tr[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='tr' name='Türkiye' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'uk' -%}
+<div class="show-uk">{%- assign item = site.data.amazon.uk[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='uk' name='United Kingdom' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'us' -%}
+<div class="show-us">{%- assign item = site.data.amazon.us[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='us' name='United States of America' item=item -%}</div>
+{%- endif -%}
+{%- if amazons contains 'none' -%}
+<div class="show-none">{%- assign item = site.data.amazon.us[set]data[selected-index] -%}{%- include html.component.amazon.component.country.html code='us' name='United States of America' item=item -%}</div>
+{%- endif -%}
+</div><!-- /Amazon Block -->

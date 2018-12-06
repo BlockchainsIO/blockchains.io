@@ -1,0 +1,53 @@
+{%- assign amazons = page.amazons | default: site.amazons -%}
+{%- assign b_id = include.block_id | default: "unknownblock" -%}
+<!-- Amazon Block {{ b_id }} -->
+<div class="amazon-block">
+{%- if amazons contains 'au' -%}
+<div class="show-au">{%-assign items=site.data.amazon.au[include.set]data -%}{%-include html.component.amazon.component.country.html code='au' name='Australia' items=items block_id=b_id -%}</div>
+{%- endif -%}
+{%-if amazons contains 'br' -%}
+<div class="show-br">{%-assign items=site.data.amazon.br[include.set]data -%}{%-include html.component.amazon.component.country.html code='br' name='Brazil' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'ca' -%}
+<div class="show-ca">{%-assign items=site.data.amazon.ca[include.set]data -%}{%-include html.component.amazon.component.country.html code='ca' name='Canada' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'cn' -%}
+<div class="show-cn">{%-assign items=site.data.amazon.cn[include.set]data -%}{%-include html.component.amazon.component.country.html code='cn' name='中国' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'de' -%}
+<div class="show-de">{%-assign items=site.data.amazon.de[include.set]data -%}{%-include html.component.amazon.component.country.html code='de' name='Deutschland' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'es' -%}
+<div class="show-es">{%-assign items=site.data.amazon.es[include.set]data -%}{%-include html.component.amazon.component.country.html code='es' name='España' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'fr' -%}
+<div class="show-fr">{%-assign items=site.data.amazon.fr[include.set]data -%}{%-include html.component.amazon.component.country.html code='fr' name='France' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'in' -%}
+<div class="show-in">{%-assign items=site.data.amazon.in[include.set]data -%}{%-include html.component.amazon.component.country.html code='in' name='India' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'it' -%}
+<div class="show-it">{%-assign items=site.data.amazon.it[include.set]data -%}{%-include html.component.amazon.component.country.html code='it' name='Italia' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'jp' -%}
+<div class="show-jp">{%-assign items=site.data.amazon.jp[include.set]data -%}{%-include html.component.amazon.component.country.html code='jp' name='日本' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'mx' -%}
+<div class="show-mx">{%-assign items=site.data.amazon.mx[include.set]data -%}{%-include html.component.amazon.component.country.html code='mx' name='Mexico' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'nl' -%}
+<div class="show-nl">{%-assign items=site.data.amazon.nl[include.set]data -%}{%-include html.component.amazon.component.country.html code='nl' name='Nederland' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'tr' -%}
+<div class="show-tr">{%-assign items=site.data.amazon.tr[include.set]data -%}{%-include html.component.amazon.component.country.html code='tr' name='Türkiye' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'uk' -%}
+<div class="show-uk">{%-assign items=site.data.amazon.uk[include.set]data -%}{%-include html.component.amazon.component.country.html code='uk' name='United Kingdom' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'us' -%}
+<div class="show-us">{%-assign items=site.data.amazon.us[include.set]data -%}{%-include html.component.amazon.component.country.html code='us' name='United States of America' items=items block_id=b_id -%}</div>
+{%-endif -%}
+{%-if amazons contains 'none' -%}
+<div class="show-none">{%-assign items=site.data.amazon.us[include.set]data -%}{%-include html.component.amazon.component.country.html code='us' name='United States of America' items=items block_id=b_id -%}</div>
+{%-endif -%}
+</div>
